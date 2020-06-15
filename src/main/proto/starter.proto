@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "sarthakn.starter.server.grpc";
+option java_outer_classname = "StarterProto";
+option objc_class_prefix = "HLW";
+
+package starterserver;
+
+message SimpleRequest {
+    string text = 1;
+}
+
+message SimpleResponse {
+    string text = 1;
+}
+
+service StarterServer {
+
+    rpc simpleRpc (SimpleRequest) returns (SimpleResponse) {
+    }
+}
